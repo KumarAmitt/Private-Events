@@ -1,2 +1,7 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<br/><br/>
+<h1>Sign Up</h1>
+<%= form_with model: @user do |form| %>
+   <%= form.label :name, "Name:" %> <br/>
+  <%= form.text_field :name %><br/><br/>
+  <%= form.submit %>
+<% end %>
