@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   include EventsHelper
 
   def index
-    @event = Event.all
+    @events = Event.all
   end
 
   def new
@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     @event = current_user.events.build(event_params)
 
     if @event.save
-      redirect_to @event
+      redirect_to @events
     else
       render :new
     end
