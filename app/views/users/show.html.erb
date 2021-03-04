@@ -1,13 +1,27 @@
-<h2 ><%= current_user.name %>'s Profile</h2>
+<h2 ><%= @user.name %>'s Profile</h2>
   <div>
-    <h3>Hosted Events: <%= current_user.events.count %></h3>
+    <h3>Hosted Events: <%= @user.events.count %></h3>
     <ul>
-      <% if current_user.events.empty? %>
+      <% if @user.events.empty? %>
         <p>User is not hosting</p>
       <% else %>
-        <% current_user.events.each do |event| %>
+        <% @user.events.each do |event| %>
           <li><%=link_to event.name, event_path(event) %></li>
         <% end %>
       <% end %>
     </ul>
   </div>
+  
+  <div>
+    <h3>Attended Events: <%= @user.attended_events.count %></h3>
+    <ul>
+      <% if @user.attended_events.empty? %>
+        <p>User is not hosting</p>
+      <% else %>
+        <% @user.attended_events.each do |event| %>
+          <li><%=link_to event.name, event_path(event) %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+

@@ -4,6 +4,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @upcoming_events = @user.attended_events.where("event_date >= ?", Time.zone.now)
+    @prev_events = @user.attended_events.where("event_date < ?", Time.zone.now)
   end
   
     def create

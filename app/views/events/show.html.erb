@@ -8,11 +8,10 @@
       </tr>
     </thead>
     <tbody>
+      <% @event.attendees.each do |user| %>
       <tr>
-        <td><%= @event.creator.name %></td>
-        <td><%= @event.name %></td>
-        <td><%= @event.description %></td>
-        <td><%= @event.event_date %></td>
+        <%= user.name %>
       </tr>
+      <% end %>
     </tbody>
   </table>
