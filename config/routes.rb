@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'events/new'
-  get 'events/show'
-  get 'events/index'
+  resources :events
   root 'home#index'
   resources :sessions, only: [:new, :create]
   resources :users, only: [:new,:create,:show]

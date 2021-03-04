@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_143003) do
     t.string "name"
     t.text "description"
     t.datetime "event_date"
-    t.integer "creator_id"
+    t.integer "creator_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["creator_id"], name: "index_events_on_creator_id"
@@ -28,5 +28,4 @@ ActiveRecord::Schema.define(version: 2021_03_03_143003) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "events", "creators"
 end
