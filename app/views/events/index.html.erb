@@ -1,18 +1,68 @@
-<table>
-    <thead>
-      <tr>
-        <th>Host</th>
-        <th>Description</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-       <% @events.each do |event| %>
-	   <tr>
-			<td> <%= event.creator.name %> </td>
-            <td> <%= event.description %></td>
-			<td> <%= event.event_date %></td>
-		</tr>
-		<% end %>
-    </tbody>
-  </table>
+<h1>List of all events - events#index</h1>
+
+
+<h2>Upcoming Events</h2>
+<% @events.each  do |event| %>
+  <% if event.event_date != nil && event.event_date >= Time.now %>
+    <li><%= event.name %></li>
+    <li><%= event.description %></li>
+    <li><%= event.creator_id %></li>
+    <li><%= event.event_date %></li>
+  <% end %>
+<% end %>
+
+<br/>
+<br/>
+
+<h2>Previous Events</h2>
+<% @events.each  do |event| %>
+  <% if event.event_date != nil && event.event_date < Time.now %>
+    <li><%= event.name %></li>
+    <li><%= event.description %></li>
+    <li><%= event.creator_id %></li>
+    <li><%= event.event_date %></li>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Host</th>-->
+<!--      <th>Description</th>-->
+<!--      <th>Date</th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--    <h3>Upcoming Events</h3>-->
+    <%# @events.each do |event| %>
+      <%# if event.event_date != nil && event.event_date >= Time.now %>
+<!--        <tr>-->
+<!--          <td> <%#= event.creator.name %> </td>-->
+<!--          <td> <%#= event.name %> </td>-->
+<!--          <td> <%#= event.description %></td>-->
+<!--          <td> <%#= event.event_date %></td>-->
+<!--        </tr>-->
+      <%# end %>
+    <%# end %>
+
+<!--    <h3>Past Events</h3>-->
+    <%# @events.each do |event| %>
+    <%# if event.event_date != nil && event.event_date < Time.now %>
+<!--      <tr>-->
+<!--        <td> <%#= event.creator.name %> </td>-->
+<!--        <td> <%#= event.name %> </td>-->
+<!--        <td> <%#= event.description %></td>-->
+<!--        <td> <%#= event.event_date %></td>-->
+<!--      </tr>-->
+    <%# end %>
+  <%# end %>
+<!--  </tbody>-->
+<!--</table>-->
+
+
