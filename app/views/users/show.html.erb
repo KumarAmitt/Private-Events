@@ -1,28 +1,51 @@
-<h2 ><%= @user.name %>'s Profile</h2>
-  <div>
-    <h3>Hosted Events: <%= @user.events.count %></h3>
-    <ul>
-      <% if @user.events.empty? %>
-        <p>User is not hosting</p>
-      <% else %>
-        <% @user.events.each do |event| %>
-          <li><%=link_to event.name, event_path(event) %></li>
-        <% end %>
-      <% end %>
-    </ul>
-  </div>
+<!--<h2 ><%#= @user.name %>'s Profile</h2>-->
+<!--  <div>-->
+<!--    <h3>Hosted Events: <%#= @user.events.count %></h3>-->
+<!--    <ul>-->
+      <%# if @user.events.empty? %>
+<!--        <p>User is not hosting</p>-->
+      <%# else %>
+        <%# @user.events.each do |event| %>
+<!--          <li><%#=link_to event.name, event_path(event) %></li>-->
+        <%# end %>
+      <%# end %>
+<!--    </ul>-->
+<!--  </div>-->
   
-  <div>
-    <h3>Attended Events: <%= @user.attended_events.count %></h3>
-    <ul>
-      <% if @user.attended_events.empty? %>
-        <p>User is not hosting</p>
-      <% else %>
-        <% @user.attended_events.each do |event| %>
-          <li><%=link_to event.name, event_path(event) %></li>
-        <% end %>
-      <% end %>
-    </ul>
-  </div>
+<!--  <div>-->
+<!--    <h3>Attended Events: <%#= @user.attended_events.count %></h3>-->
+<!--    <ul>-->
+      <%# if @user.attended_events.empty? %>
+<!--        <p>User is not hosting</p>-->
+      <%# else %>
+        <%# @user.attended_events.each do |event| %>
+<!--          <li><%#=link_to event.name, event_path(event) %></li>-->
+        <%# end %>
+      <%# end %>
+<!--    </ul>-->
+<!--  </div>-->
+
+<h2>Upcoming Events</h2>
+<% @user.events.each  do |event| %>
+  <% if event.event_date != nil && event.event_date >= Time.now %>
+    <li><%= event.name %></li>
+    <li><%= event.description %></li>
+    <li><%= event.creator_id %></li>
+    <li><%= event.event_date %></li>
+  <% end %>
+<% end %>
+
+<br/>
+<br/>
+
+<h2>Previous Events</h2>
+<% @user.events.each  do |event| %>
+  <% if event.event_date != nil && event.event_date < Time.now %>
+    <li><%= event.name %></li>
+    <li><%= event.description %></li>
+    <li><%= event.creator_id %></li>
+    <li><%= event.event_date %></li>
+  <% end %>
+<% end %>
 
 

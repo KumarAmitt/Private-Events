@@ -1,17 +1,11 @@
+<h1>List of Attendees</h1>
+
 <table>
-    <thead>
-      <tr>
-        <th>Host</th>
-        <th>Event name</th>
-        <th>Description</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @event.attendees.each do |user| %>
-      <tr>
-        <%= user.name %>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <tbody>
+    <% @event.attendees.each do |user| %>
+    <tr>
+      <%= user.name %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
