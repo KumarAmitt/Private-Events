@@ -1,11 +1,17 @@
 <h1>List of Attendees</h1>
 
+
 <table>
   <tbody>
-    <% @event.attendees.each do |user| %>
-    <tr>
-      <%= user.name %>
-    </tr>
+  <% if @event.attendees.size > 0  %>
+    <% @event.attendees.each do |attendee| %>
+      <tr>
+        <%= attendee.name %>
+      </tr>
     <% end %>
+  <% else %>
+    <%= 'No Attendees Available' %>
+  <% end %>
+
   </tbody>
 </table>

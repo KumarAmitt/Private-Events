@@ -1,5 +1,10 @@
 <br/><br/>
-<h1>Sign Up</h1>
+<h1>Create New Event</h1>
+
+<% if !flash[:notice].blank? %>
+  <%= flash[:notice] %>
+<% end %>
+
 <%= form_with model: @event do |form| %>
    <%= form.label :name, "Name:" %> <br/>
   <%= form.text_field :name %><br/>

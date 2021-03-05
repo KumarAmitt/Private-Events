@@ -1,7 +1,17 @@
 <br/><br/>
 <h1>Sign Up</h1>
+
+<% if !flash[:notice].blank? %>
+  <%= flash[:notice] %>
+<% end %>
+
 <%= form_with model: @user do |form| %>
    <%= form.label :name, "Name:" %> <br/>
   <%= form.text_field :name %><br/><br/>
   <%= form.submit %>
 <% end %>
+
+<br/>
+
+<h3>Already a member?</h3>
+<%= link_to 'Sign In', new_session_path %>

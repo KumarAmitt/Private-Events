@@ -3,6 +3,9 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @user = current_user
+    @upcoming = Event.upcoming
+    @past = Event.past
   end
 
   def new
@@ -20,8 +23,10 @@ class EventsController < ApplicationController
     @event = current_user.events.build(event_params)
 
     if @event.save
+      flash[:notice] = 'New event created'
       redirect_to @events
     else
+      flash.now[:notice] = 'Something went wrong'
       render :new
     end
   end
@@ -33,6 +38,8 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
   private
 

@@ -1,7 +1,17 @@
 <br/><br/>
+
+<% if !flash[:notice].blank? %>
+  <%= flash[:notice] %>
+<% end %>
+
 <h1>Login</h1>
 <%= form_with url: sessions_path do |form| %>
    <%= form.label :name, "Name:" %> <br/>
   <%= form.text_field :name %><br/><br/>
-  <%= form.submit %>
+  <%= form.submit 'Okay' %>
 <% end %>
+
+<br/>
+
+<h3>New to Private Events</h3>
+<%= link_to 'Sign Up', new_user_path %>
