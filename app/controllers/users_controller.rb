@@ -7,7 +7,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @upcoming_events = @user.events.where('event_date >= ?', Time.zone.now)
     @previous_events = @user.events.where('event_date < ?', Time.zone.now)
-
   end
 
   def create
@@ -21,7 +20,6 @@ class UsersController < ApplicationController
       render :new
     end
   end
-
 
   private
 

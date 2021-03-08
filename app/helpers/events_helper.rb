@@ -1,5 +1,4 @@
 module EventsHelper
-
   def create_event(user = nil)
     if user
       link_to 'Create Events', new_event_path
