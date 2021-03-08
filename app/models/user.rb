@@ -3,5 +3,5 @@ class User < ApplicationRecord
   has_many :event_attendees, foreign_key: :attendee_id
   has_many :attended_events, through: :event_attendees, source: :attended_event
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 end
