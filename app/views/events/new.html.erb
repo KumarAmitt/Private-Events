@@ -6,11 +6,11 @@
       <div class="card-content">
         <p>
           <%= form_with model: @event do |form| %>
-            <%= form.label :name, "Name:" %> <br/>
+            <%= form.label :name, "Title:" %> <br/>
             <%= form.text_field :name %><br/>
             <%= form.label :description, "Description:" %><br/>
             <%= form.text_area :description, size: "60x10" %><br/>
-            <%= form.label :event_date, "Date:" %><br/>
+            <%= form.label :event_date, "Event Date:" %><br/>
             <%= form.date_field :event_date%><br/><br/>
             <%= form.submit 'Create Event', class:'waves-effect waves-light btn' %>
           <% end %>
