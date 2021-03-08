@@ -1,36 +1,19 @@
 # Private Events
 
-![Microverse](https://img.shields.io/badge/-Microverse-6F23FF?style=for-the-badge)
 
 Private events is a web app that allows users
 to sign up/sign in. Users can create events; events have a title and a description, and take
 place on a specific date. A user can attend many events. An event can be attended by many
 users.
 
-## Library Directory 📙
-
-| Contents                    |
-| --------------------------- |
-| [Screenshots](#screenshots) |
-| [Built With](#built-with-🛠) |
-| [Install](#install-⏳)      |
-| [Testing](#testing)         |
-| [Authors](#authors)         |
-| [License](#license)         |
-
-## Screenshots
-
-![img](./app/assets/images/main.png)
 
 ## Built With 🛠
 
 ```
-- Ruby: 2.6.3
-- Ruby on Rails: 6.0.3.4
+- Ruby: 2.7.2
+- Ruby on Rails: 6.1.3
 - SQLite
-- Bootsrap
-- Simple form
-- VS Code
+- Materialize
 ```
 
 ## Install ⏳
@@ -39,9 +22,9 @@ users.
 
 1. - [ ] Open your `Terminal`
 2. - [ ] Navigate to the directory where you will like to install the repo by running `cd FOLDER-NAME`
-3. - [ ] Run `git clone git@github.com:khalilhamdii/private-events.git` to download <b>or</b> you can download using `HTTPS` by running `git clone https://github.com/khalilhamdii/private-events.git` in the terminal
-4. - [ ] Run `cd private-events` to enter directory
-5. - [ ] Run `bundle install` to install Ruby Gems (<b>hint:</b> Mac users, if not working then run `sudo bundle install`)
+3. - [ ] Run `git clone git@github.com:KumarAmitt/Private-Events.git` to download <b>or</b> you can download using `HTTPS` by running `git clone https://github.com/KumarAmitt/Private-Events.git` in the terminal
+4. - [ ] Run `cd Private-Events` to enter directory
+5. - [ ] Run `bundle install` to install Ruby Gems.
 6. - [ ] Run `rails db:create` to create your database
 7. - [ ] Run `rails db:migrate` to migrate your database
 8. - [ ] Run `rails s` to get the server running
@@ -57,7 +40,7 @@ In order to run the tests, RSPEC should be installed.
 gem install rspec
 ```
 
-- When the installation is complete, type this command inside `private-events` folder to run the tests :
+- When the installation is complete, type this command inside `Private-Events` folder to run the tests :
 
 ```bash
 rspec
@@ -65,25 +48,30 @@ rspec
 
 ## Authors
 
-### 👨‍💻 Khalil Hamdi
+### 👨‍💻 Kenechukwu Oguagbaka
 
-[![GitHub](https://img.shields.io/badge/-GitHub-000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/khalilhamdii) <br>
-[![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/khalilhamdi/) <br>
-[![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:khaalil.hamdi@gmail.com) <br>
-[![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/Khalilhamdiii)
+- GitHub: [@keneogu](https://github.com/keneogu)
+- Twitter: [@keneogu](https://twitter.com/keneogu)
+- LinkedIn: [@keneogu](https://www.linkedin.com/in/kene-ogu/)
 
-### 👨‍💻 Daniel Ronan
+### 👨‍💻 Amit Kumar
 
-[![GitHub](https://img.shields.io/badge/-GitHub-000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/DcRonan) <br>
-[![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/danronan10/) <br>
-[![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:danielconnorronan@gmail.com) <br>
-[![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/dc_ronan)
+- GitHub: [@KumarAmitt](https://github.com/KumarAmitt)
+- Twitter: [@ArrshAmit](https://twitter.com/ArrshAmitt)
+- LinkedIn: [@kumar-amitt](https://www.linkedin.com/in/kumar-amitt)
 
 ### 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](enter issues url here).
+- Fork the project
+- Create your feature branch `git checkout -b feature`
+- Commit your changes `git commit -m 'feature'`
+- Push it `git push -u origin feature`
+- Open a pull request using this branch
+
+
+Feel free to check the [issues page](https://github.com/KumarAmitt/Private-Events/issues).
 
 ### Show your support
 
@@ -91,5 +79,21 @@ Give a ⭐️ if you like this project!
 
 ### License
 
-![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking?color=red&style=for-the-badge)
+&copy; 2020 Amit Kumar & Kenechukwu Oguagbaka
 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE.
