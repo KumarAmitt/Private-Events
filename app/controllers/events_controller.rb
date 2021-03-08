@@ -13,8 +13,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    # @event = Event.find(params[:id])
-    @all_attendees = User.all.where('id != ?', current_user.id)
+    @all_attendees = User.all
   end
 
   def edit; end
