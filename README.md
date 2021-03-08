@@ -1,5 +1,6 @@
 # Private Events
 
+![Microverse](https://img.shields.io/badge/-Microverse-6F23FF?style=for-the-badge)
 
 Private events is a web app that allows users
 to sign up/sign in. Users can create events; events have a title and a description, and take
