@@ -1,50 +1,39 @@
-<h1>List of all events - events#index</h1>
 
-<% if !flash[:notice].blank? %>
-  <%= flash[:notice] %>
-<% end %>
+<h1 class="pink-text darken-1">
+  All Events
+</h1>
 
-<div>
-  <%= link_to 'Sign In', new_session_path %>
-  <%= link_to 'Sign Up', new_user_path %>
+<h3 class="right">
+  <%= current_user_name(@user) %>
+</h3>
+
+<div class="chip pink lighten-5">
+  <%= create_event(@user) %>
 </div>
 
 
-<div>
-  <% if @user %>
-    <%= link_to 'Create Events', new_event_path %>
-  <% else %>
-    <%= link_to 'Create Events', new_session_path %>
-  <% end %>
-</div>
+<h2>
+  <%= heading_link(@user) %>
+</h2>
 
-<div>
-  <% if @user %>
-    <%= link_to @user.name, user_path(@user) %>
-  <% end %>
-</div>
+<ul class="collection">
+  <%= show_my_event_section(@events, @user) %>
+</ul>
 
-
-
-<h2>Upcoming Events</h2>
-<% @upcoming.each  do |event| %>
-    <li><%= event.name %></li>
-    <li><%= event.description %></li>
-    <li><%= event.creator_id %></li>
-    <li><%= event.event_date %></li>
-<% end %>
+<h3>Upcoming Events</h3>
+<ul class="collection">
+  <%= render 'event', event_type: @upcoming %>
+</ul>
 
 <br/>
 <br/>
 
-<h2>Previous Events</h2>
-<% @past.each  do |event| %>
-    <li><%= event.name %></li>
-    <li><%= event.description %></li>
-    <li><%= event.creator_id %></li>
-    <li><%= event.event_date %></li>
-<% end %>
+<h3>Previous Events</h3>
+<ul class="collection">
+  <%= render 'event', event_type: @past %>
+</ul>
 
 
-<h2>************</h2>
+
+
 

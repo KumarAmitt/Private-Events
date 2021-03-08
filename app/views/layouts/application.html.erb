@@ -8,9 +8,63 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  </head>
   </head>
 
   <body>
-    <%= yield %>
+
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <%= link_to 'Private Events', root_path, class: 'brand-logo' %>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><%= link_to 'Sign In', new_session_path %></li>
+            <li><%= link_to 'Sign Up', new_user_path %></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <br/>
+
+    <% if !flash[:notice].blank? %>
+     <div class="container">
+       <div class="chip red lighten-4">
+         <%= flash[:notice] %>
+       </div>
+     </div>
+    <% end %>
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Private Events</h5>
+            <p class="grey-text text-lighten-4">Create Unlimited Private Events and get a chance to Attend other events.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2021 Amit & Kene
+          <%= link_to 'Home', root_path, class:'grey-text text-lighten-4 right' %>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>

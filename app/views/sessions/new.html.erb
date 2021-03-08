@@ -1,17 +1,26 @@
-<br/><br/>
 
-<% if !flash[:notice].blank? %>
-  <%= flash[:notice] %>
-<% end %>
-
-<h1>Login</h1>
-<%= form_with url: sessions_path do |form| %>
-   <%= form.label :name, "Name:" %> <br/>
-  <%= form.text_field :name %><br/><br/>
-  <%= form.submit 'Okay' %>
-<% end %>
-
-<br/>
-
-<h3>New to Private Events</h3>
-<%= link_to 'Sign Up', new_user_path %>
+<div class="col s12 m7">
+  <h2 class="header">Login</h2>
+  <div class="card horizontal">
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>
+          <%= form_with url: sessions_path do |form| %>
+            <%= form.label :name, "Name:" %> <br/>
+            <%= form.text_field :name %><br/><br/>
+            <button class="btn waves-effect waves-light">
+              <%= form.submit 'Okay'%>
+              <i class="material-icons right">send</i>
+            </button>
+        <% end %>
+        </p>
+      </div>
+      <div class="card-action">
+        <div class="center">
+          <h4>New to Private Events?</h4>
+          <%= link_to 'Sign Up', new_user_path, class: 'waves-effect waves-light btn' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

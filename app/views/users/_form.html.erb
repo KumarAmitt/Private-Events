@@ -1,0 +1,5 @@
+<%= form_with model: @user do |form| %>
+  <%= form.label :name, "Name:" %> <br/>
+  <%= form.text_field :name %><br/><br/>
+  <%= form.submit 'Sign Up', class:'waves-effect waves-light btn' %>
+<% end %>

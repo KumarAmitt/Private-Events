@@ -1,17 +1,9 @@
-<h1>List of Attendees</h1>
+<h1 class="pink-text darken-1">List of Attendees</h1>
 
-
-<table>
-  <tbody>
-  <% if @event.attendees.size > 0  %>
-    <% @event.attendees.each do |attendee| %>
-      <tr>
-        <%= attendee.name %>
-      </tr>
-    <% end %>
-  <% else %>
-    <%= 'No Attendees Available' %>
-  <% end %>
-
-  </tbody>
-</table>
+<% attendee_list(@all_attendees).each do |attendee| %>
+  <div class="collection">
+    <div class="collection-item active">
+      <%= attendee %>
+    </div>
+  </div>
+<% end %>

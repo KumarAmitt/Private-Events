@@ -1,29 +1,24 @@
 
-<h2>
+<h1 class="pink-text darken-1">
   <%= "#{@user.name}'s Events" %>
-</h2>
+</h1>
+<br/>
+<div class="chip pink lighten-5">
+  <%= link_to 'All Attendees', event_path %>
+</div>
 
-<h2>Upcoming Events</h2>
-<% @user.events.each  do |event| %>
-  <% if event.event_date != nil && event.event_date >= Time.now %>
-    <li><%= event.name %></li>
-    <li><%= event.description %></li>
-    <li><%= event.creator_id %></li>
-    <li><%= event.event_date %></li>
-  <% end %>
-<% end %>
+<h3>Upcoming Events</h3>
+<ul class="collection">
+  <%= render 'event', events: @upcoming_events %>
+</ul>
 
 <br/>
 <br/>
 
-<h2>Previous Events</h2>
-<% @user.events.each  do |event| %>
-  <% if event.event_date != nil && event.event_date < Time.now %>
-    <li><%= event.name %></li>
-    <li><%= event.description %></li>
-    <li><%= event.creator_id %></li>
-    <li><%= event.event_date %></li>
-  <% end %>
-<% end %>
+<h3>Previous Events</h3>
+<ul class="collection">
+  <%= render 'event', events: @previous_events %>
+</ul>
 
-<%= link_to 'All Members', event_path %>
+
+

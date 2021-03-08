@@ -13,7 +13,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    # @event = Event.find(params[:id])
+    @all_attendees = User.all.where('id != ?', current_user.id)
   end
 
   def edit; end
@@ -24,21 +25,12 @@ class EventsController < ApplicationController
 
     if @event.save
       flash[:notice] = 'New event created'
-      redirect_to @events
+      redirect_to root_path
     else
-      flash.now[:notice] = 'Something went wrong'
+      flash.now[:notice] = "Name & Date can't be blank"
       render :new
     end
   end
-
-  def destroy
-    @event.destroy
-    respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
 
 
   private
@@ -46,4 +38,5 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:name, :description, :event_date)
   end
+
 end

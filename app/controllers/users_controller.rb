@@ -5,8 +5,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @upcoming_events = @user.attended_events.where('event_date >= ?', Time.zone.now)
-    @prev_events = @user.attended_events.where('event_date < ?', Time.zone.now)
+    @upcoming_events = @user.events.where('event_date >= ?', Time.zone.now)
+    @previous_events = @user.events.where('event_date < ?', Time.zone.now)
+
   end
 
   def create
@@ -19,11 +20,12 @@ class UsersController < ApplicationController
       flash[:notice] = "Name can't be blank"
       render :new
     end
-end
+  end
+
 
   private
 
   def user_params
     params.require(:user).permit(:name)
-end
+  end
 end

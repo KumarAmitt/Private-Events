@@ -1,16 +1,21 @@
-<br/><br/>
-<h1>Create New Event</h1>
 
-<% if !flash[:notice].blank? %>
-  <%= flash[:notice] %>
-<% end %>
-
-<%= form_with model: @event do |form| %>
-   <%= form.label :name, "Name:" %> <br/>
-  <%= form.text_field :name %><br/>
-  <%= form.label :description, "Title:" %><br/>
-  <%= form.text_area :description, size: "60x10" %><br/>
-  <%= form.label :event_date, "Date:" %><br/>
-  <%= form.date_field :event_date%><br/><br/>
-  <%= form.submit %>
-<% end %>
+<div class="col s12 m7">
+  <h2 class="header">Create New Event</h2>
+  <div class="card horizontal">
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>
+          <%= form_with model: @event do |form| %>
+            <%= form.label :name, "Name:" %> <br/>
+            <%= form.text_field :name %><br/>
+            <%= form.label :description, "Description:" %><br/>
+            <%= form.text_area :description, size: "60x10" %><br/>
+            <%= form.label :event_date, "Date:" %><br/>
+            <%= form.date_field :event_date%><br/><br/>
+            <%= form.submit 'Create Event', class:'waves-effect waves-light btn' %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
