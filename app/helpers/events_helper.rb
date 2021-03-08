@@ -21,10 +21,12 @@ module EventsHelper
 
   def attendee_list(attendee)
     name = []
-    if attendee.size > 0
+    if attendee.size.positive?
       attendee.each { |e| name << e.name }
+      name
+    else
+      'No Attendees Available'
     end
-    name
   end
 
   private

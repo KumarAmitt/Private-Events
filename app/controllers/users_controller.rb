@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'Sign Up Successfully'
       redirect_to new_session_path
     else
-      flash[:notice] = "Name can't be blank"
+      flash[:notice] = 'Name already exists OR Name is blank'
       render :new
     end
   end
