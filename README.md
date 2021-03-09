@@ -7,6 +7,7 @@ to sign up/sign in. Users can create events; events have a title and a descripti
 place on a specific date. A user can attend many events. An event can be attended by many
 users.
 
+![screenshot](./app/assets/images/Events Mockup.png)
 
 ## Built With 🛠
 
