@@ -26,5 +26,4 @@ RSpec.feature 'Events', type: :feature do
     fill_in :Description, with: 'All the peoples are invited to party!!!'
     fill_in 'Event Date', with: '11/03/2021'
   end
-
 end
