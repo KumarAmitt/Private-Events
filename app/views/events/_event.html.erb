@@ -1,0 +1,11 @@
+<% event_type.each  do |event| %>
+  <li class="collection-item avatar">
+    <i class="material-icons circle green">directions_boat</i>
+    <span class="title"><%= event.name %></span>
+    <p><%= event.description %> <br>
+    </p>
+    <span class="secondary-content">
+      <%= event.event_date %>
+    </span>
+  </li>
+<% end %>

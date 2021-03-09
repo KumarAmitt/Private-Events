@@ -1,0 +1,39 @@
+
+<h1 class="pink-text darken-1">
+  All Events
+</h1>
+
+<h3 class="right">
+  <%= current_user_name(@user) %>
+</h3>
+
+<div class="chip pink lighten-5">
+  <%= create_event(@user) %>
+</div>
+
+
+<h2>
+  <%= heading_link(@user) %>
+</h2>
+
+<ul class="collection">
+  <%= show_my_event_section(@events, @user) %>
+</ul>
+
+<h3>Upcoming Events</h3>
+<ul class="collection">
+  <%= render 'event', event_type: @upcoming %>
+</ul>
+
+<br/>
+<br/>
+
+<h3>Previous Events</h3>
+<ul class="collection">
+  <%= render 'event', event_type: @past %>
+</ul>
+
+
+
+
+

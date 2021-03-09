@@ -1,0 +1,19 @@
+
+<div class="col s12 m7">
+  <h2 class="header">Sign Up</h2>
+  <div class="card horizontal">
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>
+          <%= render 'form' %>
+        </p>
+      </div>
+      <div class="card-action">
+        <div class="center">
+          <h4>Already a member?</h4>
+          <%= link_to 'Sign In', new_session_path, class: 'waves-effect waves-light btn' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

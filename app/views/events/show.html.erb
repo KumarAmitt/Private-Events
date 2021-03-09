@@ -1,0 +1,16 @@
+<h1 class="pink-text darken-1">List of Attendees</h1>
+
+<div class="chip pink lighten-5">
+  <%= link_to 'View All Events', root_url %>
+</div>
+
+<br/>
+<br/>
+
+<% attendee_list(@all_attendees).each do |attendee| %>
+  <div class="collection">
+    <div class="collection-item active">
+      <h5><%= attendee %></h5>
+    </div>
+  </div>
+<% end %>

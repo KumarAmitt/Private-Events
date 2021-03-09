@@ -1,0 +1,729 @@
+=> [32m#<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x0000556fc42e11c8[0m
+ @advisory_locks_enabled[32m=[0m[1;36mtrue[0m,
+ @config[32m=[0m
+  {[33m:adapter[0m=>[31m[1;31m"[0m[31msqlite3[1;31m"[0m[31m[0m,
+   [33m:pool[0m=>[1;34m5[0m,
+   [33m:timeout[0m=>[1;34m5000[0m,
+   [33m:database[0m=>[31m[1;31m"[0m[31m/home/kene/Documents/private projects/Private-Events/db/development.sqlite3[1;31m"[0m[31m[0m},
+ @connection[32m=[0m
+  [32m#<SQLite3::Database:0x0000556fc42e13d0[0m
+   @authorizer[32m=[0m[1;36mnil[0m,
+   @busy_handler[32m=[0m[1;36mnil[0m,
+   @collations[32m=[0m{},
+   @encoding[32m=[0m[32m#<Encoding:UTF-8>[0m,
+   @functions[32m=[0m{},
+   @readonly[32m=[0m[1;36mfalse[0m,
+   @results_as_hash[32m=[0m[1;36mtrue[0m,
+   @tracefunc[32m=[0m[1;36mnil[0m,
+   @type_translation[32m=[0m[1;36mnil[0m,
+   @type_translator[32m=[0m
+    [32m#<Proc:0x0000556fc13c9520 /home/kene/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/sqlite3-1.4.2/lib/sqlite3/database.rb:722 (lambda)>[0m[32m>[0m,
+ @idle_since[32m=[0m[1;35m25443.052534872[0m,
+ @instrumenter[32m=[0m
+  [32m#<ActiveSupport::Notifications::Instrumenter:0x0000556fc44e8e58[0m
+   @id[32m=[0m[31m[1;31m"[0m[31m9903e72b2e721bc5bee2[1;31m"[0m[31m[0m,
+   @notifier[32m=[0m
+    [32m#<ActiveSupport::Notifications::Fanout:0x0000556fc18a1700[0m
+     @_mutex[32m=[0m[32m#<Thread::Mutex:0x0000556fc18a1548[0m[32m>[0m,
+     @listeners_for[32m=[0m[32m#<Concurrent::Map:0x0000556fc18a1638 entries=4 default_proc=nil>[0m,
+     @other_subscribers[32m=[0m[],
+     @string_subscribers[32m=[0m
+      {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveStorage::LogSubscriber-4440[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveStorage::LogSubscriber-4440[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveStorage::LogSubscriber-4440[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveStorage::LogSubscriber-4440[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveStorage::LogSubscriber-4440[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveStorage::LogSubscriber-4440[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveStorage::LogSubscriber-4440[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87f88[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_upload.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a87880[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a876a0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_streaming_download.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a872b8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86f48[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_delete_prefixed.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86b10[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_exist.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86408[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveStorage::LogSubscriber:0x0000556fc1a904d0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mservice_url.active_storage[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc1a86278[0m ...[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveStorage::LogSubscriber-4440[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mservice_mirror.active_storage[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38433d8[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38433d8[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38432e8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38431f8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843108[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843018[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveRecord::LogSubscriber-10660[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38432e8[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38433d8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38432e8[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38431f8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843108[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843018[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveRecord::LogSubscriber-10660[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38431f8[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38433d8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38432e8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38431f8[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843108[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843018[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveRecord::LogSubscriber-10660[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843108[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38433d8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38432e8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38431f8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843108[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843018[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveRecord::LogSubscriber-10660[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843018[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38433d8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mstrict_loading_violation.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38432e8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc38431f8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner=.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843108[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveRecord::LogSubscriber:0x0000556fc38435e0[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mbacktrace_cleaner?.active_record[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3843018[0m ...[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveRecord::LogSubscriber-10660[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m[32m>[0m,
+         [32m#<ActiveSupport::Notifications::Fanout::Subscribers::MonotonicTimed:0x0000556fc38f6e38[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<Proc:0x0000556fc38f6eb0 /home/kene/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rack-mini-profiler-2.3.1/lib/mini_profiler_rails/railtie.rb:134>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m[32m>[0m,
+         [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc3cd3e70[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m[32m#<ActiveRecord::ExplainSubscriber:0x0000556fc3cd3e98[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31msql.active_record[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mstart_processing.action_controller[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::MonotonicTimed:0x0000556fc38f7298[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<Proc:0x0000556fc38f7310 /home/kene/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rack-mini-profiler-2.3.1/lib/mini_profiler_rails/railtie.rb:134>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mstart_processing.action_controller[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mprocess_action.action_controller[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::MonotonicTimed:0x0000556fc38f7180[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<Proc:0x0000556fc38f71f8 /home/kene/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rack-mini-profiler-2.3.1/lib/mini_profiler_rails/railtie.rb:134>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mprocess_action.action_controller[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mrender_partial.action_view[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::MonotonicTimed:0x0000556fc38f7068[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<Proc:0x0000556fc38f70e0 /home/kene/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rack-mini-profiler-2.3.1/lib/mini_profiler_rails/railtie.rb:134>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mrender_partial.action_view[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mrender_template.action_view[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::MonotonicTimed:0x0000556fc38f6f50[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<Proc:0x0000556fc38f6fc8 /home/kene/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rack-mini-profiler-2.3.1/lib/mini_profiler_rails/railtie.rb:134>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mrender_template.action_view[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mload_config_initializer.railties[1;31m"[0m[31m[0m=>[],
+       [31m[1;31m"[0m[31mprocess_middleware.action_dispatch[1;31m"[0m[31m[0m=>[],
+       [31m[1;31m"[0m[31m!connection.active_record[1;31m"[0m[31m[0m=>[],
+       [31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d27c0[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d27c0[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d26d0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d25e0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d24c8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d23b0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mperform_start.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d22c0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mperform_start.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mperform.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d21d0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mperform.active_job[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveJob::LogSubscriber-14500[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d26d0[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d27c0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d26d0[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d25e0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d24c8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d23b0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mperform_start.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d22c0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mperform_start.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mperform.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d21d0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mperform.active_job[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveJob::LogSubscriber-14500[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d25e0[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d27c0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d26d0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d25e0[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d24c8[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d23b0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mperform_start.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d22c0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mperform_start.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mperform.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d21d0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mperform.active_job[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveJob::LogSubscriber-14500[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d24c8[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m
+            @patterns[32m=[0m
+             {[31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d27c0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mdiscard.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d26d0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mretry_stopped.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d25e0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue_retry.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m=>[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d24c8[0m ...[32m>[0m,
+              [31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d23b0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mperform_start.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d22c0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mperform_start.active_job[1;31m"[0m[31m[0m[32m>[0m,
+              [31m[1;31m"[0m[31mperform.active_job[1;31m"[0m[31m[0m=>
+               [32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d21d0[0m
+                @can_publish[32m=[0m[1;36mfalse[0m,
+                @delegate[32m=[0m[32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m ...[32m>[0m,
+                @pattern[32m=[0m[31m[1;31m"[0m[31mperform.active_job[1;31m"[0m[31m[0m[32m>[0m},
+            @queue_key[32m=[0m[31m[1;31m"[0m[31mActiveJob::LogSubscriber-14500[1;31m"[0m[31m[0m[32m>[0m,
+          @pattern[32m=[0m[31m[1;31m"[0m[31menqueue.active_job[1;31m"[0m[31m[0m[32m>[0m],
+       [31m[1;31m"[0m[31menqueue_at.active_job[1;31m"[0m[31m[0m=>
+        [[32m#<ActiveSupport::Notifications::Fanout::Subscribers::Evented:0x0000556fc44d23b0[0m
+          @can_publish[32m=[0m[1;36mfalse[0m,
+          @delegate[32m=[0m
+           [32m#<ActiveJob::LogSubscriber:0x0000556fc44d2ba8[0m
+            @patterns[32m=[0m
+             {
