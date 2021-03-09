@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       flash[:notice] = 'Logged in successfully'
       redirect_to root_path(@user)
     else
-      flash.now[:notice] = 'Please enter your name'
+      flash.now[:notice] = 'Please enter valid name'
       render 'new'
     end
   end
