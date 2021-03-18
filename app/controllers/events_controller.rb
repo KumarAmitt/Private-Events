@@ -6,6 +6,7 @@ class EventsController < ApplicationController
     @user = current_user
     @upcoming = Event.upcoming
     @past = Event.past
+    @event_option = @events.map { |e| [e.name, e.id] }
   end
 
   def new
